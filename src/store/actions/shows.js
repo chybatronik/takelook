@@ -1,8 +1,8 @@
 import 'cross-fetch/polyfill'
 
-const URL = 'http://api.tvmaze.com/shows'
+const URL = 'https://api.tvmaze.com/shows'
 
-const URLSearch = 'http://api.tvmaze.com/search/shows'
+const URLSearch = 'https://api.tvmaze.com/search/shows'
 
 export const REQUEST_SHOWS = 'REQUEST_SHOWS'
 export const RECEIVE_SHOWS = 'RECEIVE_SHOWS'
