@@ -9,7 +9,7 @@ const ShowComponent = (props) => {
     <Card style={{}}
       hoverable
       cover={<img alt='example' src={image && image.medium ? image.medium : 'https://placeimg.com/210/295/any'} />}
-      onClick={() => { props.handleOnClick('/details/' + id) }}
+      onClick={() => { props.handleOnClick('/takelook/build/details/' + id) }}
     >
       <Meta
         title={name}

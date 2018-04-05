@@ -20,9 +20,9 @@ class App extends Component {
               placeholder='Search Shows and People'
               onSearch={value => {
                 if (!value || value === '') {
-                  history.push('/')
+                  history.push('/takelook/build')
                 } else {
-                  history.push('/search/' + value)
+                  history.push('/takelook/build/search/' + value)
                 }
               }}
               enterButton
@@ -30,9 +30,9 @@ class App extends Component {
           </Header>
           <Content style={{ padding: '0 50px', marginTop: 64, minHeight: '85vh' }}>
             <div style={{ margin: '16px 0', background: '#fff', padding: 24, minHeight: '80vh' }}>
-              <Route exact path='/' component={DefaultListPage} />
-              <Route path='/search/:name' component={SearchPage} />
-              <Route path='/details/:id' component={DetailsPage} />
+              <Route exact path='/takelook/build/' component={DefaultListPage} />
+              <Route path='/takelook/build/search/:name' component={SearchPage} />
+              <Route path='/takelook/build/details/:id' component={DetailsPage} />
             </div>
           </Content>
           <Footer style={{ textAlign: 'center' }}>

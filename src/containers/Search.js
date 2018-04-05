@@ -36,12 +36,6 @@ export class SearchContainer extends Component {
     this.props.history.push(url)
   }
 
-  // loadFunc = () => {
-  //   const { config } = this.props.shows
-  //   if(!config.isFetch)
-  //     this.props.getSearchShows(this.props.match.params.name)
-  // }
-
   render () {
     const { shows, config } = this.props.shows
     if (!shows || Object.keys(shows).length === 0 || config.isFetch || config.isError) {
