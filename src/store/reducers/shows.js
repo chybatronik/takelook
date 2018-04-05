@@ -31,6 +31,19 @@ const shows = (state = defaultState, action) => {
           isFetch: false
         }
       }
+    case actions.RECEIVE_SEARCH_SHOWS:
+      const shows2 = action.payload.shows.reduce((result, item) => {
+        result[item.id] = item
+        return result
+      }, {})
+      return {
+        shows: {...shows2},
+        config: {
+          ...state.config,
+          page: 0,
+          isFetch: false
+        }
+      }
     case actions.ERROR_SHOWS:
       return {
         ...state,

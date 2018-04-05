@@ -1,9 +1,10 @@
 import React, { Component } from 'react'
 import { Layout, Input } from 'antd'
-import { BrowserRouter as Router, Route } from 'react-router-dom'
+import { Router, Route } from 'react-router-dom'
 import SearchPage from '../containers/Search'
 import DetailsPage from '../containers/Details'
 import DefaultListPage from '../containers/DefaultList'
+import history from '../history'
 
 import './App.css'
 const Search = Input.Search
@@ -12,12 +13,18 @@ const { Header, Content, Footer } = Layout
 class App extends Component {
   render () {
     return (
-      <Router>
+      <Router history={history}>
         <Layout>
           <Header style={{ position: 'fixed', width: '100%', zIndex: 1000 }}>
             <Search
               placeholder='Search Shows and People'
-              onSearch={value => console.log(value)}
+              onSearch={value => {
+                if (!value || value === '') {
+                  history.push('/')
+                } else {
+                  history.push('/search/' + value)
+                }
+              }}
               enterButton
             />
           </Header>

@@ -21,6 +21,7 @@ export class DetailsConatiner extends Component {
       this.props.getShowEpisodes(this.props.match.params.id)
     }
   }
+
   renderLoader (config) {
     if (config.isError) {
       return (
@@ -41,7 +42,7 @@ export class DetailsConatiner extends Component {
       if (showEpisodes) {
         return this.renderLoader(showEpisodes)
       }
-      return null
+      return this.renderLoader({isFetch: true})
     }
 
     const dataSource = Object.keys(showEpisodes).map((id) => {
@@ -65,7 +66,7 @@ export class DetailsConatiner extends Component {
       title: 'Trailer',
       dataIndex: 'address',
       key: 'address',
-      render: text => <a href={text}><Icon type="play-circle" /></a>
+      render: text => <a href={text}><Icon type='play-circle' /></a>
     }]
     return (
       <Table dataSource={dataSource} columns={columns} />
@@ -100,7 +101,7 @@ export class DetailsConatiner extends Component {
           <Col xs={{ span: 6, pull: 16 }} sm={{ span: 6, pull: 16 }} md={{ span: 6, pull: 16 }} lg={{ span: 6, pull: 16 }} >
             <Card
               hoverable
-              cover={<img alt='example' src={show.image.medium} />}
+              cover={<img alt='example' src={show.image && show.image.medium ? show.image.medium : 'https://placeimg.com/210/295/any'} />}
             />
           </Col>
         </Row>
