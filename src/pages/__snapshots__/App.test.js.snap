@@ -1,0 +1,68 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders without crashing 1`] = `
+<BrowserRouter>
+  <Adapter>
+    <Adapter
+      style={
+        Object {
+          "position": "fixed",
+          "width": "100%",
+          "zIndex": 1000,
+        }
+      }
+    >
+      <Search
+        enterButton={true}
+        inputPrefixCls="ant-input"
+        onSearch={[Function]}
+        placeholder="Search Shows and People"
+        prefixCls="ant-input-search"
+      />
+    </Adapter>
+    <Adapter
+      style={
+        Object {
+          "marginTop": 64,
+          "minHeight": "85vh",
+          "padding": "0 50px",
+        }
+      }
+    >
+      <div
+        style={
+          Object {
+            "background": "#fff",
+            "margin": "16px 0",
+            "minHeight": "80vh",
+            "padding": 24,
+          }
+        }
+      >
+        <Route
+          component={[Function]}
+          exact={true}
+          path="/"
+        />
+        <Route
+          component={[Function]}
+          path="/search/:name"
+        />
+        <Route
+          component={[Function]}
+          path="/details/:id"
+        />
+      </div>
+    </Adapter>
+    <Adapter
+      style={
+        Object {
+          "textAlign": "center",
+        }
+      }
+    >
+      Takelook ©2018 Created by chybatronik
+    </Adapter>
+  </Adapter>
+</BrowserRouter>
+`;

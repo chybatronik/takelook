@@ -1,0 +1,63 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`DefaultListContainer isFetch false 1`] = `
+<InfiniteScroll
+  element="div"
+  hasMore={true}
+  initialLoad={true}
+  isReverse={false}
+  loadMore={[Function]}
+  loader={
+    <div
+      className="spiner"
+    >
+      <Spin
+        prefixCls="ant-spin"
+        size="large"
+        spinning={true}
+        wrapperClassName=""
+      />
+    </div>
+  }
+  pageStart={0}
+  ref={null}
+  threshold={250}
+  useCapture={false}
+  useWindow={true}
+>
+  <Row
+    gutter={16}
+  />
+</InfiniteScroll>
+`;
+
+exports[`DefaultListContainer isFetch true 1`] = `
+<InfiniteScroll
+  element="div"
+  hasMore={true}
+  initialLoad={true}
+  isReverse={false}
+  loadMore={[Function]}
+  loader={
+    <div
+      className="spiner"
+    >
+      <Spin
+        prefixCls="ant-spin"
+        size="large"
+        spinning={true}
+        wrapperClassName=""
+      />
+    </div>
+  }
+  pageStart={0}
+  ref={null}
+  threshold={250}
+  useCapture={false}
+  useWindow={true}
+>
+  <Row
+    gutter={16}
+  />
+</InfiniteScroll>
+`;
